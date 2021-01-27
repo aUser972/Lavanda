@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.5)
+project(IpcParent)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -O0 -g")
+file(GLOB SOURCES "main.c")
+add_executable(IpcParent ${SOURCES})
+target_link_libraries(IpcParent rt)
